@@ -11,6 +11,7 @@ $(document).ready(function () {
                         }
                     }))
                 response(data)
+                //console.log(response)
         },
         minLength: 2,
         select: function(event, ui) {

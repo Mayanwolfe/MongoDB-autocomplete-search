@@ -27,7 +27,7 @@ app.get("/search", async (request,response) => {
     try {
         let result = await collection.aggregate([
             {
-                "$Search" : {
+                "$search" : {
                     "autocomplete" : {
                         "query": `${request.query.query}`,
                         "path": "title",
@@ -39,9 +39,11 @@ app.get("/search", async (request,response) => {
                 }
             }
         ]).toArray()
+        //console.log(result)
         response.send(result)
     } catch (error) {
         response.status(500).send({message: error.message})
+        //console.log(error)
     }
 })
 
