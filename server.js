@@ -62,3 +62,21 @@ app.get("/get/:id", async (request, response) => {
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server is running.`)
 })
+
+//THIS IS THE INDEX TO APPLY TO MONGODB MOVIES COLLECTION
+// {
+//     "mappings": {
+//         "dynamic": false,
+//         "fields": {
+//             "title": [
+//                 {
+//                     "foldDiacritics": false,
+//                     "maxGrams": 7,
+//                     "minGrams": 3,
+//                     "tokenization": "edgeGram",
+//                     "type": "autocomplete"
+//                 }
+//             ]
+//         }
+//     }
+// }
